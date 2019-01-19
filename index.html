@@ -20,7 +20,8 @@
 <body>
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top ">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" 
+                    data-target="#Navbar">
                 <span class="navbaar-toggler-icon"></span>
             </button>
             <a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="30" width="41"></a>
@@ -49,7 +50,10 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a href="#guestsCard" role="button" class="btn btn-warning btn-block btn-sm ">Reserve Table</a>
+                    <a href="#guestsCard" role="button" class="btn btn-warning btn-block nav-link btn-sm "
+                        data-toggle="tooltip" data-html="true" 
+                        title="Or Call us at <br><strong>+901234567890</strong>" data-placement="bottom"
+                    >Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -224,7 +228,12 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('[data-toggle ="tooltip"]').tooltip();
+        })
 
+    </script>
 </body>
 
 </html>
